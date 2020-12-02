@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./style.css";
 
 export function App() {
@@ -7,7 +7,7 @@ export function App() {
       <div className="background">
         CASIO
         <pre>fx-5B1BB0F PLUS</pre>
-        <Schermo testo="0" />
+        <Schermo testo={0} />
         <Pulsante testo={7} />
         <Pulsante testo={8} />
         <Pulsante testo={9} />
@@ -34,28 +34,33 @@ export function App() {
 }
 
 export function Schermo(props) {
-  const testo = props.testo;
   return (
     <div className="schermo">
-      <div>{testo}</div>
+      <div>{props.testo}</div>
     </div>
   );
 }
 
 export function Pulsante(props) {
-  const testo = props.testo;
+  const [count, setCount] = React.useState(0);
+
+  function azione() {
+    setCount(count + 1);
+    console.log('tasto premuto ' + count + ' volte');
+  }
+
+  useEffect(() => {
+    //questo metodo viene applicato ogni volta che il componente viene renderizzato
+    console.log('rendering del tasto "' + props.testo + '"...');
+    //in cima si deve importare così: import React, {useState, useEffect} from "react";
+  });
+
   return (
     <button
       className="pulsante"
-      onClick={() => {
-        Saluto(testo);
-      }}
+      onClick={() => { azione(); }}
     >
-      {testo}
+      {props.testo}
     </button>
   );
-}
-
-function Saluto(testo) {
-  console.log(testo);
 }
