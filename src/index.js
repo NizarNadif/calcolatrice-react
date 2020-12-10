@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Calcolatrice } from "./App";
+import { App } from "./App";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <Calcolatrice />
+    <App />
   </React.StrictMode>,
   rootElement
 );

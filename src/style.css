@@ -16,10 +16,9 @@
 .calcolatrice {
   text-align: center;
   background-color: #1a1918;
-  height: 525px;
   width: 350px;
   border-radius: 30px;
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   margin: 10px;
   display: inline-block;
 
@@ -54,6 +53,7 @@
 .schermo {
   background-color:#b0a480;
   height: 100px;
+  width: auto;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -64,6 +64,13 @@
   font-size: 30px;
   color: black;
   text-align: left;
+  overflow-wrap: break-word;;
+}
+
+.risultato {
+  text-align: right;
+  margin-top: 40px;
+  position: sticky;
 }
 
 .cursore {
