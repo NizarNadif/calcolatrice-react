@@ -173,13 +173,11 @@ export function Pulsante(props) {
     //in cima si deve importare così: import React, {useState, useEffect} from "react";
   }); */
 	let stile = {};
-	let stileAttivo = {};
 	if (props.bg_color != undefined) {
 		stile = {
 			backgroundColor: props.bg_color[0],
 			boxShadow: "1px 2px 4px " + props.bg_color[1],
 		};
-		stileAttivo = { backgroundColor: "red" };
 	}
 
 	return (
