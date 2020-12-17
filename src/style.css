@@ -1,112 +1,119 @@
 @font-face {
-  font-family: calculator;
-  src: url(assets/digital-7.ttf);
+	font-family: calculator;
+	src: url(../assets/digital-7.ttf);
 }
 
 @font-face {
-  font-family: eurostyle;
-  src: url(assets/EuroStyle-normal.ttf);
+	font-family: eurostyle;
+	src: url(../assets/EuroStyle-normal.ttf);
 }
 
 @font-face {
-  font-family: hypocrisy;
-  src: url(assets/SfHypocrisy-sketched.ttf);
+	font-family: hypocrisy;
+	src: url(../assets/SfHypocrisy-sketched.ttf);
 }
 
 .calcolatrice {
-  text-align: center;
-  background-color: #1a1918;
-  width: 350px;
-  border-radius: 30px;
-  padding: 20px 20px 30px 20px;
-  margin: 10px;
-  display: inline-block;
+	text-align: center;
+	background-color: #1a1918;
+	width: 350px;
+	border-radius: 30px;
+	padding: 20px 20px 30px 20px;
+	margin: 10px;
+	display: inline-block;
 
-  /* text */
-  font-family: sans-serif;
-  color: white;
+	/* text */
+	font-family: sans-serif;
+	color: white;
 
-  /* shadows */
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
+	/* shadows */
+	box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .logo {
-  margin-left: 20px;
-  margin-right: 140px;
-  display: inline-block;
+	margin-left: 20px;
+	margin-right: 140px;
+	display: inline-block;
 
-  /* text */
-  font-family: eurostyle;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  transform:scale(1.5,1);
+	/* text */
+	font-family: eurostyle;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	transform: scale(1.5, 1);
 }
 
 .schermo {
-  background-color:#b0a480;
-  height: 100px;
-  width: auto;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  border: inset 8px #0f0f0e;
+	background-color: #b0a480;
+	height: 100px;
+	width: auto;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	border: inset 8px #0f0f0e;
 
-  /* text */
-  font-family: calculator;
-  font-size: 30px;
-  color: black;
-  text-align: left;
-  overflow-wrap: break-word;;
+	/* text */
+	font-family: calculator;
+	font-size: 30px;
+	color: black;
+	text-align: left;
+	overflow-wrap: break-word;
 }
 
 .risultato {
-  text-align: right;
-  margin-top: 40px;
-  position: sticky;
+	text-align: right;
+	margin-top: 40px;
+	position: sticky;
 }
 
 .cursore {
-  display: inline-block;
-  padding-left: 2px;
-  transform:scale(1.5,1.2);
-  animation: lampeggia 1.2s linear 0s infinite;
+	display: inline-block;
+	padding-left: 2px;
+	transform: scale(1.5, 1.2);
+	animation: lampeggia 1.2s linear 0s infinite;
 }
 
 @keyframes lampeggia {
-  0%   { opacity: 0; }
-  45%  { opacity: 0; }
-  50%  { opacity: 1; }
-  95%  { opacity: 0; }
-  100% { opacity: 0; }
+	0% {
+		opacity: 0;
+	}
+	45% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 .pulsante {
-  user-select: none; /* il testo non è selezionabile */
-  background-color: #6C6C6C;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  width: 40px;
-  height: 30px;
-  display: inline-block;
-  box-shadow:1px 2px 4px #3f4347;
+	user-select: none; /* il testo non è selezionabile */
+	background-color: #6c6c6c;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	width: 40px;
+	height: 30px;
+	display: inline-block;
+	box-shadow: 1px 2px 4px #3f4347;
 
-  /* text */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 30px;
-  color: white;
-  text-shadow:0 1px 0 #5c584e;
+	/* text */
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	line-height: 30px;
+	color: white;
+	text-shadow: 0 1px 0 #5c584e;
 }
 
 /* si usa quando si preme il pulsante */
 .pulsante:active {
-  box-shadow:1px 2px 4px #3f4347 inset;
+	box-shadow: 1px 2px 4px #3f4347 inset;
 }
