@@ -1,18 +1,3 @@
-@font-face {
-	font-family: calculator;
-	src: url(../assets/digital-7.ttf);
-}
-
-@font-face {
-	font-family: eurostyle;
-	src: url(../assets/EuroStyle-normal.ttf);
-}
-
-@font-face {
-	font-family: hypocrisy;
-	src: url(../assets/SfHypocrisy-sketched.ttf);
-}
-
 .calcolatrice {
 	text-align: center;
 	background-color: #1a1918;

@@ -4,13 +4,16 @@ const actualAngle = toRad;
 let degree = false;
 let risultati = [0];
 
-export function changeAngle() {
-	if (degree) {
-		degree = false;
-		return "rad";
-	} else {
-		degree = true;
-		return "deg";
+export function changeAngle(angle) {
+	switch (angle) {
+		case "rad":
+			degree = true;
+			return "deg";
+		case "deg":
+			degree = false;
+			return "rad";
+		default:
+			break;
 	}
 }
 
@@ -47,7 +50,7 @@ function isOperand(x) {
 	return x == "+" || x == "-" || x == "x" || x == "÷" || x == "^" || x == "%";
 }
 
-function isFunction(x) {
+export function isFunction(x) {
 	return x == "cos" || x == "sin" || x == "tan" || x == "log" || x == "√";
 }
 

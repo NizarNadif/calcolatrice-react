@@ -1,3 +1,17 @@
+@font-face {
+	font-family: calculator;
+	src: url(assets/digital-7.ttf);
+}
+
+@font-face {
+	font-family: eurostyle;
+	src: url(assets/EuroStyle-normal.ttf);
+}
+
+@font-face {
+	font-family: hypocrisy;
+	src: url(assets/SfHypocrisy-sketched.ttf);
+}
 body {
 	text-align: center;
 }
