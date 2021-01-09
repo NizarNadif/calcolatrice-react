@@ -85,10 +85,7 @@ export function Calcolatrice() {
 	const pulsantiJSX = state.pulsanti.map((nome) => (
 		<Pulsante testo={nome} key={nome} />
 	));
-	/* dispatch({
-		type: 'add',
-		payload: '7'
-	}); */
+
 	return (
 		<div className="calcolatrice">
 			<div className="logo">CASIO</div>
@@ -108,11 +105,6 @@ export function Calcolatrice() {
 			<AppContext.Provider value={{ state, dispatch }}>
 				<Schermo />
 				{pulsantiJSX}
-				{/*
-					onClick={() => setEspressione(cancella(espressione))}
-					testo={"DEL"}
-					bg_color={["#8BA937", "green"]}
-				*/}
 			</AppContext.Provider>
 		</div>
 	);
@@ -131,15 +123,11 @@ export function Schermo(props) {
 
 export function Pulsante(props) {
 	const { state, dispatch } = useContext(AppContext);
-	let stile = {};
-	if (props.bg_color != undefined) {
-		stile = {
-			backgroundColor: props.bg_color[0],
-			boxShadow: "1px 2px 4px " + props.bg_color[1],
-		};
-	}
+	let classi = "pulsante";
 
 	let testo = props.testo;
+	if (testo == "AC" || testo == "DEL") classi += " pulsante-verde";
+
 	let tipo = "inserisci";
 	switch (testo) {
 		case "=":
@@ -170,13 +158,13 @@ export function Pulsante(props) {
 
 	if (testo == "rad" || testo == "deg") {
 		return (
-			<a className="pulsante" onClick={() => esegui()} style={stile}>
+			<a className={classi} onClick={() => esegui()}>
 				{state.angolo}
 			</a>
 		);
 	}
 	return (
-		<a className="pulsante" onClick={() => esegui()} style={stile}>
+		<a className={classi} onClick={() => esegui()}>
 			{testo}
 		</a>
 	);
